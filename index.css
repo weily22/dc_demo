@@ -1,6 +1,7 @@
 .demo {
   padding: 22px 55px 0 55px;
   background-color: #fff;
+  min-width: 660px;
 }
 
 header {
@@ -94,6 +95,8 @@ section {
   bottom:0;
   height: 500px;
   margin: auto;
+  z-index: 2;
+  min-width: 400px
   /* transform: translateX(-82px); */
   /* margin-left: 86px; */
 }
@@ -289,6 +292,7 @@ footer {
   right: 55px;
   /* width:100%; */
   bottom:0;
+  min-width: 660px;
 }
 
 footer a, footer span {
@@ -318,7 +322,8 @@ footer span:active, footer a:active {
 
 .ph_pw {
   position: absolute;
-  left: 18%;
+  left: -1px;
+  /* left: 18%; */
   /* top: 7px; */
   height: 40px;
   line-height: 40px;
