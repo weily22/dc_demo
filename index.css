@@ -378,6 +378,7 @@ footer span:active, footer a:active {
   section input {
     width: 79%;
     height: 35px;
+    line-height: 35px;
     /* background-color: #f78; */
   }
 
