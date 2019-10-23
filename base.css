@@ -1,0 +1,77 @@
+article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
+* {
+  margin: 0;
+  padding: 0;
+}
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+        box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
+  line-height: 1.42857143;
+  color: #383838;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-overflow-scrolling: touch;
+  font-size: 14px;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+a,
+a:hover,
+a:focus,
+a:visited {
+  color: transparent;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  vertical-align: middle;
+}
+
+h1,h2,h3,h4,h5,h6,p,figure,form,blockquote {
+  margin: 0;
+}
+
+ul,ol,li,dl,dd {
+  margin: 0;
+  padding: 0;
+}
+
+ul,ol {
+  list-style: none outside none;
+}
+
+/* 兼容IE8 */
+input::-ms-clear {
+  display:none
+}
+::-ms-clear, ::-ms-reveal{display: none;}

@@ -1,0 +1,334 @@
+.demo {
+  padding: 22px 55px 0 55px;
+  background-color: #fff;
+}
+
+header {
+  padding: 0 5px 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+header .logo {
+  margin-right: 11px;
+}
+
+.demo_left {
+  cursor: pointer;
+}
+
+a.demo_left:active .title {
+  color: #666;
+}
+
+.title:active {
+  color: #666;
+}
+
+.demo_right {
+  position: absolute;
+  bottom: 45px;
+  right: 0;
+  color: #999;
+}
+
+.demo_right a {
+  font-size: 14px;
+  color: #999;
+}
+
+.demo_right a:active {
+  color: #666;
+}
+
+
+header .title {
+  font-size: 25px;
+  color: #999999;
+  display: inline-block;
+  position: relative;
+  margin-left: 17px;
+  vertical-align: bottom;
+  bottom: 15px;
+  /* font-family: PingFangSC-Regular; */
+  font-weight: bold;
+}
+
+header .title:before {
+  position: absolute;
+  content: '';
+  width: 7px;
+  height: 7px;
+  background-color: #ddd;
+  top: 50%;
+  /* top: -4px; */
+  left: -17px;
+  border-radius: 50px;
+  -ms-behavior: url(PIE.htc);
+  behavior: url(PIE.htc);
+}
+
+.top_bar {
+  height: 6px;
+  /* background: #ffc00a url('./images/bar.png'); */
+  background-size: 100% 100%;
+  background-color: #ffc00a;
+  background-image: linear-gradient(-180deg, #FFE69D 0%, #FFC00A 100%);
+}       
+
+section {
+  width: 400px;
+  padding: 55px 10px 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -250px;
+  /* background-color: pink; */
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  height: 500px;
+  margin: auto;
+  /* transform: translateX(-82px); */
+  /* margin-left: 86px; */
+}
+section >div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  /* align-items: center; */
+  position: relative;
+  /* background-color: #58a; */
+  margin-bottom: 18px;
+  /* flex-wrap: nowrap; */
+  justify-content: flex-start;
+}
+
+section .form_title {
+  /* font-family: PingFangSC-Regular; */
+  display: block;
+  font-size: 22px;
+  line-height: 25px;
+  color: #999999;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+section input {
+  display: inline-block;
+  width: 100%;
+  /* float: left; */
+  /* max-width: 360px; */
+  height: 45px;
+  line-height: 45px;
+  /* background: transparent; */
+  border: 1px solid #D6D6D6;
+  /* margin-bottom: 12px; */
+  display:inline-block;
+  outline: none;
+  padding: 2px 10px;
+  font-size: 16px;
+  z-index: 2;
+  position: relative;
+  border-radius: 4px;
+  -ms-behavior: url(PIE.htc);
+  behavior: url(PIE.htc);
+  box-sizing: border-box;
+}
+input[type=text]::-ms-clear {
+  display:none
+}
+
+section input:focus {
+  /* background: rgba(216,216,216,0.00); */
+  /* background: #fff; */
+  border: 1px solid rgba(81, 199, 122, 0.6);
+  /*-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#a8e4b8')";  For IE 8 */
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.045), 0 0 8px rgba(106, 205, 83, 0.6);
+  /* -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.045), 0 0 8px 0 0 10px rgba(106, 205, 83, 0.6);
+  -ms-behavior: url(PIE.htc);
+  behavior: url(PIE.htc); */
+  
+}
+
+section input::-webkit-input-placeholder {
+  font-size: 16px;
+  color: #C8C8C8;
+}
+
+section label {
+  display: inline-block;
+  font-size: 18px;
+  /* font-size: 1.3em; */
+  height: 40px;
+  line-height: 40px;
+  /* width: 18%; */
+  /* width: 82px; */
+  color: #343434;
+  /* text-align: justify; */
+  font-weight: normal;
+  /* background-color: rgb(156, 90, 23); */
+  position: absolute;
+  left: -82px;
+}
+
+section .iphone, section .code, section .img_code {
+  position: relative;
+}
+
+#img_code {
+  font-size: 2.2em;
+}
+
+section .iphone_code {
+  width: 70%;
+}
+
+section .iphone_code.error {
+  border-color: #f00;
+}
+
+section .code-span {
+  display: inline-block;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  width: 30%;
+  border: 1px solid #D6D6D6;
+  border-radius: 3.6px;
+  font-size: 1em;
+  color: #999999;
+  cursor: pointer;
+  margin-left: 18px;
+  -ms-behavior: url(PIE.htc);
+  behavior: url(PIE.htc);
+}
+
+.img_code .code-span {
+  color: #6aac8b;
+  font-weight: bold;
+}
+
+.code-span.get_code {
+  color: green;
+}
+
+section .code-span:hover {
+  /* color: #bfbaba; */
+  /* opacity: 0.75; */
+}
+
+section .code-inpt {
+  width: 128px;
+  height: 54px;
+}
+
+section .code-inpt:first-of-type {
+  margin-right: 13px;
+}
+
+section .valid {
+  /* font-family: PingFangSC-Regular; */
+  font-size: 15px;
+  color: #FF3742;
+  /* text-align: justify; */
+  /* margin: 0 82px 17px; */
+  position: absolute;
+  /* right: 0; */
+  left: 390px;
+  width: 150px;
+  top: 28%;
+}
+
+section .btn {
+  width: 100%;
+  height: 45px;
+  background: #ffb900;
+  border-radius: 3.6px;
+  color: #fff;
+  position: absolute;
+  /* margin-left: 18%; */
+  margin-top: 13px;
+  outline: none;
+  cursor: pointer;
+  border: 0;
+  transition: all .3s;
+  font-size: 20px;
+  right: 0;
+  -ms-behavior: url(PIE.htc);
+  behavior: url(PIE.htc);
+}
+
+section .btn:active {
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.35);
+  /* background-color: #e6a805; */
+  /* box-shadow: 0px 0px 10px rgba(255, 184, 3); */
+  box-shadow: 0px 0px 10px rgb(242, 192, 134);
+  -ms-behavior: url(PIE.htc);
+  behavior: url(PIE.htc);
+
+}
+
+footer {
+  height: 70px;
+  line-height: 70px;
+  font-size: 14px;
+  color: #999999;
+  text-align: center;
+  border-top: 1px solid #f0f0f0;
+  background-color: #fff;
+  /* position: relative; */
+  position: absolute;
+  left: 55px;
+  right: 55px;
+  /* width:100%; */
+  bottom:0;
+}
+
+footer a, footer span {
+  cursor: pointer;
+}
+
+footer span:active, footer a:active {
+  opacity: 0.75;
+}
+
+.yb img {
+  width: 56px;
+  height: auto;
+  position: absolute;
+  right:0;
+  top: 50%;
+  transform: translateY(-50%);
+  /* -ms-transform: translateY(-50%);
+  -ms-behavior: url(PIE.htc);
+  behavior: url(PIE.htc); */
+}
+/* 兼容 */
+
+.placeholder {
+  color: #999;
+}
+
+.ph_pw {
+  position: absolute;
+  left: 18%;
+  /* top: 7px; */
+  height: 40px;
+  line-height: 40px;
+  font-style: normal;
+  padding-left: 15px;
+  z-index: -1;
+  font-size: 16px;
+  color: #999;
+}
+
+.ph_pw.hide {
+  display: none;
+}

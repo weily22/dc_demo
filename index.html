@@ -1,0 +1,142 @@
+<!--
+ * @Author: Weily
+ * @Date: 2019-10-21 13:18:10
+ * @Description: file content
+ * @LastEditors: Weily
+ * @LastEditTime: 2019-10-21 18:25:16
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1"> -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+  <title>小米试稿</title>
+  <link rel="stylesheet" href="./base.css">
+  <link rel="stylesheet" href="./index.css">
+  <!-- <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script> -->
+  <script src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
+  <script src="js/html5shiv.min.js"></script>
+  <!--[if lte IE 8]>
+    <script src="PIE.js"></script>
+  <![endif]-->
+  <!--[if IE 8]>
+  <style>
+    section input {
+      width: 81%;
+      position: absolute;
+      right: 0;
+      background: transparent;
+    }
+    section .iphone_code {
+      width: 59%;
+      right: 22%;
+    }
+    section .code-span {
+      width: 20%;
+      position: absolute;
+      right: 0;
+    }
+    section .btn {
+      width: 81%;
+    }
+    section input:focus {
+      background: #fff;
+      border: 1px solid rgb(81, 199, 122);
+      box-shadow: 0 0 10px rgb(205, 244, 196);
+      -ms-behavior: url(PIE.htc);
+      behavior: url(PIE.htc);
+    }
+    .yb img {
+      margin-top: -20px;
+    }
+  </style>
+  <![endif]-->
+  
+</head>
+<body>    
+  <div class="demo">
+    <header>
+      <a href="javascript:location.reload();" class="demo_left"><img class="logo" src="./images/logo.png" alt=""><span class="title">后台管理系统</span></a>
+      <div class="demo_right"><a href="javascript:location.reload();">PC客户端</a> | <a href="javascript:location.reload();">手机客户端</a></div>
+    </header>
+    <div class="top_bar"></div>
+    <section>
+      <div class="form_title">管理员登录</div>
+      <div><label htmlFor="">账　号：</label><input id="name" placeholder="请输入账号" type="text" autocapitalize="off" autocorrect="off" /><span class="valid"></span></div>
+      <div>
+        <label htmlFor="">密　码：</label>
+        <input autocapitalize="off" autocorrect="off" id="password" placeholder="请输入密码" type="password"/>
+        <i class="ph_pw hide">请输入密码</i>
+        <span class="valid"></span>
+      </div>
+      <div class="img_code">
+        <label htmlFor="">图形码：</label>
+        <input id="img" placeholder="图形验证码" class="iphone_code"/>
+        <span id="img_code" class="code-span" onclick="createCode(4)">Xa99</span>
+        <span class="valid"></span>
+      </div>
+      <div class="iphone">
+        <label htmlFor="">手　机：</label><input oninput="onInput()" placeholder="请输入手机号" type="tel" id="mobile" name="mobile" class="iphone_code"/>
+        <span id="code" class="code-span" onclick="getSms();">发送验证码</span>
+        <span id="iphone_valid" class="valid"></span>
+      </div>
+      <!-- <div class="code"><label>验证码：</label><input class="code-inpt" placeholder="手机码"/><input class="code-inpt" placeholder="验证码" type="text"/> <span class="code-span">XA99</span></div> -->
+      <div>
+        <label htmlFor="">手机码：</label>
+        <input id="phone_c" placeholder="请输入手机码" type="tel"/>
+        <span class="valid"></span>
+      </div>
+      <!-- <div id="valid" class="valid"></div> -->
+      <div class="foot-btn"><button class="btn" onclick="login()">登录</button></div>
+    </section>
+    <footer><span onclick="reload()">Copyright @ 2017 点菜宝贝 Diancai Baobei.com All Rights Reserved.</span> <a href="javascript:location.reload();" title="元宝" class="yb"><img src="./images/yb.png" alt=""></a></footer>
+  </div>
+  <!--ie placeholder 兼容 start-->
+<script type="text/javascript">
+  if( !('placeholder' in document.createElement('input')) ){
+    $('input[placeholder],textarea[placeholder]').each(function(){
+      var that = $(this),
+      text= that.attr('placeholder');
+      if(that.val()===""){
+        if (that.attr('type') === 'password') {
+          $('.ph_pw').removeClass('hide');
+          // that.val(text).addClass('placeholder');
+        } else {
+          that.val(text).addClass('placeholder');
+        }
+        
+      }
+      that.focus(function(){
+        if(that.val()===text){
+          if (that.attr('type') === 'password') {
+            $('.ph_pw').addClass('hide');
+          } else {
+            that.val("").removeClass('placeholder');
+          }          
+        }
+      })
+      .blur(function(){
+        if(that.val()===""){
+          if (that.attr('type') === 'password') {
+            $('.ph_pw').removeClass('hide');
+            // that.val(text).addClass('placeholder');
+          } else {
+            that.val(text).addClass('placeholder');
+          }
+        }
+      })
+      .closest('form').submit(function(){
+        if(that.val() === text){
+          that.val('');
+        }
+      });
+    });
+  }
+</script>
+<!--ie placeholder 兼容 end-->
+  <script src="./index.js"></script>
+</body>
+</html>`
