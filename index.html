@@ -61,36 +61,41 @@
       <div class="demo_right"><a href="javascript:location.reload();">PC客户端</a> | <a href="javascript:location.reload();">手机客户端</a></div>
     </header>
     <div class="top_bar"></div>
-    <section>
-      <div class="form_title">管理员登录</div>
-      <div><label htmlFor="">账　号：</label><input id="name" placeholder="请输入账号" type="text" autocapitalize="off" autocorrect="off" /><span class="valid"></span></div>
-      <div>
-        <label htmlFor="">密　码：</label>
-        <input autocapitalize="off" autocorrect="off" id="password" placeholder="请输入密码" type="password"/>
-        <i class="ph_pw hide">请输入密码</i>
-        <span class="valid"></span>
-      </div>
-      <div class="img_code">
-        <label htmlFor="">图形码：</label>
-        <input id="img" placeholder="图形验证码" class="iphone_code"/>
-        <span id="img_code" class="code-span" onclick="createCode(4)">Xa99</span>
-        <span class="valid"></span>
-      </div>
-      <div class="iphone">
-        <label htmlFor="">手　机：</label><input oninput="onInput()" placeholder="请输入手机号" type="tel" id="mobile" name="mobile" class="iphone_code"/>
-        <span id="code" class="code-span" onclick="getSms();">发送验证码</span>
-        <span id="iphone_valid" class="valid"></span>
-      </div>
-      <!-- <div class="code"><label>验证码：</label><input class="code-inpt" placeholder="手机码"/><input class="code-inpt" placeholder="验证码" type="text"/> <span class="code-span">XA99</span></div> -->
-      <div>
-        <label htmlFor="">手机码：</label>
-        <input id="phone_c" placeholder="请输入手机码" type="tel"/>
-        <span class="valid"></span>
-      </div>
-      <!-- <div id="valid" class="valid"></div> -->
-      <div class="foot-btn"><button class="btn" onclick="login()">登录</button></div>
-    </section>
-    <footer><span onclick="reload()">Copyright @ 2017 点菜宝贝 Diancai Baobei.com All Rights Reserved.</span> <a href="javascript:location.reload();" title="元宝" class="yb"><img src="./images/yb.png" alt=""></a></footer>
+    <div class="container">
+      <section>
+        <div class="form_title">管理员登录</div>
+        <div><label htmlFor="">账　号：</label><input id="name" placeholder="请输入账号" type="text" autocapitalize="off" autocorrect="off" /><span class="valid"></span></div>
+        <div>
+          <label htmlFor="">密　码：</label>
+          <input autocapitalize="off" autocorrect="off" id="password" placeholder="请输入密码" type="password"/>
+          <i class="ph_pw hide">请输入密码</i>
+          <span class="valid"></span>
+        </div>
+        <div class="img_code">
+          <label htmlFor="">图形码：</label>
+          <input id="img" placeholder="图形验证码" class="iphone_code"/>
+          <span id="img_code" class="code-span" onclick="createCode(4)">Xa99</span>
+          <span class="valid"></span>
+        </div>
+        <div class="iphone">
+          <label htmlFor="">手　机：</label><input oninput="onInput()" placeholder="请输入手机号" type="tel" id="mobile" name="mobile" class="iphone_code"/>
+          <span id="code" class="code-span" onclick="getSms();">发送验证码</span>
+          <span id="iphone_valid" class="valid"></span>
+        </div>
+        <!-- <div class="code"><label>验证码：</label><input class="code-inpt" placeholder="手机码"/><input class="code-inpt" placeholder="验证码" type="text"/> <span class="code-span">XA99</span></div> -->
+        <div>
+          <label htmlFor="">手机码：</label>
+          <input id="phone_c" placeholder="请输入手机码" type="tel"/>
+          <span class="valid"></span>
+        </div>
+        <!-- <div id="valid" class="valid"></div> -->
+        <div class="foot-btn"><button class="btn" onclick="login()">登录</button></div>
+      </section>
+    </div>
+    <footer>
+      <span onclick="reload()">Copyright @ 2017 点菜宝贝 Diancai Baobei.com All Rights Reserved.</span> 
+      <a href="javascript:location.reload();" title="元宝" class="yb"><img src="./images/yb.png" alt=""></a>
+    </footer>
   </div>
   <!--ie placeholder 兼容 start-->
 <script type="text/javascript">
@@ -137,4 +142,4 @@
 <!--ie placeholder 兼容 end-->
   <script src="./index.js"></script>
 </body>
-</html>`
+</html>
