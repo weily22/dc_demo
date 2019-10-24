@@ -439,6 +439,16 @@ footer span:active, footer a:active {
   }
   a{-webkit-tap-highlight-color:transparent};
 
+  a.demo_left:active .title {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 3px inset;
+    /* background: #f00; */
+  }
+
+  a.demo_left:active {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 1px inset;
+    background: #ccc;
+  }
+
   /* span:active {
     background-color: red;
     -webkit-tap-highlight-color: transparent;
@@ -472,8 +482,18 @@ footer span:active, footer a:active {
     box-shadow: inset 0 0 5px 1px #e4e0e0;
   }
   a{-webkit-tap-highlight-color:transparent};
+
+  a.demo_left:active .title {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 3px inset;
+    /* background: #f00; */
+  }
+  a.demo_left:active {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 1px inset;
+    background: #ddd;
+  }
+  .demo_right a:active {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 1px inset;
+    background: #ddd;
+  }
+
 }
-
-/* @media only screen and (max-height: 479px) {
-
-} */
