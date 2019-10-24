@@ -43,7 +43,7 @@ a,
 a:hover,
 a:focus,
 a:visited {
-  color: transparent;
+  /* color: transparent; */
   text-decoration: none;
   cursor: pointer;
   border: 0;
