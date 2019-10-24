@@ -434,6 +434,10 @@ footer span:active, footer a:active {
     background-color: #e2a606;
     -webkit-tap-highlight-color: transparent;
   }
+  section .code-span:active {
+    box-shadow: inset 0 0 5px 1px #e4e0e0;
+  }
+  a{-webkit-tap-highlight-color:transparent};
 
   /* span:active {
     background-color: red;
@@ -464,6 +468,10 @@ footer span:active, footer a:active {
     background-color: #e2a606;
     -webkit-tap-highlight-color: transparent;
   }
+  section .code-span:active {
+    box-shadow: inset 0 0 5px 1px #e4e0e0;
+  }
+  a{-webkit-tap-highlight-color:transparent};
 }
 
 /* @media only screen and (max-height: 479px) {
