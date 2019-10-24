@@ -456,6 +456,10 @@ footer span:active, footer a:active {
     -webkit-appearance:none;
     line-height: normal;
   }
+  input::-webkit-input-placeholder { /* WebKit browsers */
+    font-size: 14px;
+    line-height: 14px;
+  }
   input:focus {
       color: #8b8791;
   }
@@ -495,6 +499,21 @@ footer span:active, footer a:active {
     box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 1px inset;
     background: #ddd;
   }
+  input{
+    /* text-indent: 0;
+    /* background: transparent; */
+    border: 0 none;
+    resize:none; 
+    -webkit-appearance:none;
+    line-height: normal;
+  }
+  input::-webkit-input-placeholder { /* WebKit browsers */
+    font-size: 14px;
+    line-height: 14px;
+  }
+  input:focus {
+      color: #8b8791;
+  }
 
 }
 /* ipads兼容 */
@@ -523,6 +542,21 @@ and (orientation : landscape) {
     box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 1px inset;
     background: #ddd;
   }
+  input{
+    /* text-indent: 0;
+    /* background: transparent; */
+    border: 0 none;
+    resize:none; 
+    -webkit-appearance:none;
+    line-height: normal;
+  }
+  input::-webkit-input-placeholder { /* WebKit browsers */
+    font-size: 14px;
+    line-height: 14px;
+  }
+  input:focus {
+      color: #8b8791;
+  }
 }
 
 @media only screen 
@@ -549,6 +583,21 @@ and (orientation : portrait) {
   .demo_right a:active {
     box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 1px inset;
     background: #ddd;
+  }
+  input{
+    /* text-indent: 0;
+    /* background: transparent; */
+    border: 0 none;
+    resize:none; 
+    -webkit-appearance:none;
+    line-height: normal;
+  }
+  input::-webkit-input-placeholder { /* WebKit browsers */
+    font-size: 14px;
+    line-height: 14px;
+  }
+  input:focus {
+    color: #8b8791;
   }
 }
 
