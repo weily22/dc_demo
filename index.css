@@ -428,6 +428,12 @@ footer span:active, footer a:active {
     /* width: 150px; */
     top: 37px;
   }
+
+  .btn:active {
+    color: hsla(0, 0%, 100%, .3);
+    background: #e2a606;
+  }
+
   /* #page{ width: 300px; }#content,.div1{width: 300px;}#secondary{display:none}#access{width: 330px;} #access a {padding-right:10px;padding-left:10px}#access a img{display:none}#rss{display:none}#branding #s{display:none}#access ul ul a{width:100px} */
 }
 
@@ -440,7 +446,14 @@ footer span:active, footer a:active {
     position: relative;
     min-height: 500px;
     /* background-color: #f00; */
-  } 
+  }
+}
+/* 平板 */
+@media screen and (min-width:600px) and (max-width:960px) {
+  .btn:active {
+    color: hsla(0, 0%, 100%, .3);
+    background: #e2a606;
+  }
 }
 
 /* @media only screen and (max-height: 479px) {
