@@ -94,9 +94,20 @@ function login() {
 }
 
 
-$('.ph_pw').click(function () {
+$('.a').on('click', function (e) {
+  $('#name').focus();
+})
+$('.b').on('click', function (e) {
   $('#password').focus();
-  $(this).addClass('hide');
+})
+$('.c').on('click', function (e) {
+  $('#img').focus();
+})
+$('.d').on('click', function (e) {
+  $('#mobile').focus();
+})
+$('.e').on('click', function (e) {
+  $('#phone_c').focus();
 })
 
 $('#mobile').on('keyup', function () {
@@ -113,6 +124,17 @@ $('#mobile').on('keyup', function () {
   value = arr.join('');
   that.val(value);
 })
+
+$('#name, #password, #img, #mobile, #phone_c').each(function (index) {
+  $(this).on('keyup', function() {
+    if ($(this).val()) {
+      $('.pholder').eq(index).addClass('hide')
+    } else {
+      $('.pholder').eq(index).removeClass('hide');
+    }
+  });
+})
+
 
 if (window.attachEvent) {    
   window.attachEvent('touchstart', function() {});    

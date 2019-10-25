@@ -64,13 +64,11 @@ header .title:before {
   content: '';
   width: 7px;
   height: 7px;
-  background-color: #ddd;
+  background-color: #ccc;
   top: 50%;
   /* top: -4px; */
   left: -17px;
-  border-radius: 50px;
-  -ms-behavior: url(PIE.htc);
-  behavior: url(PIE.htc);
+  border-radius: 50%;
 }
 
 .top_bar {
@@ -294,22 +292,29 @@ footer span:active, footer a:active {
   color: #999;
 }
 
-.ph_pw {
+.pholder {
   position: absolute;
   left: -1px;
   /* left: 18%; */
   /* top: 7px; */
-  height: 40px;
-  line-height: 40px;
+  height: 30px;
+  line-height: 30px;
   font-style: normal;
-  padding-left: 15px;
-  z-index: -1;
+  padding-left: 10px;
+  /* z-index: -1; */
   font-size: 16px;
   color: #999;
+  /* background-color: #f00; */
+  margin-top: 5px;
+  margin-left: 3px;
 }
 
-.ph_pw.hide {
+.ph_pw.hide, .pholder.hide {
   display: none;
+}
+
+.pholder {
+  z-index: 10;
 }
 
 @media screen and (max-width: 767px) {
@@ -469,11 +474,11 @@ footer span:active, footer a:active {
   .container {
     position: relative;
     min-height: 500px;
-    /* background-color: #f00; */
+    background-color: #f00;
   }
 }
 /* 平板 */
-@media screen and (min-width:600px) and (max-width:960px) {
+/* @media screen and (min-width:600px) and (max-width:960px) {
   .btn:active {
     background-color: #e2a606;
     -webkit-tap-highlight-color: transparent;
@@ -486,8 +491,8 @@ footer span:active, footer a:active {
   a.demo_left:active .title {
     box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 3px inset;
     /* background: #f00; */
-  }
-  a.demo_left:active {
+  /* } */
+  /* a.demo_left:active {
     box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 1px inset;
     background: #ddd;
   }
@@ -505,7 +510,7 @@ footer span:active, footer a:active {
     color: #8b8791;
   }
 
-}
+} */
 /* ipads兼容 */
 @media only screen 
 and (min-device-width : 768px) 
@@ -522,7 +527,6 @@ and (orientation : landscape) {
 
   a.demo_left:active .title {
     box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 3px inset;
-    /* background: #f00; */
   }
   a.demo_left:active {
     box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 1px inset;

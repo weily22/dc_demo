@@ -24,6 +24,42 @@
   <![endif]-->
   <!--[if IE 8]>
   <style>
+    body,html {
+      min-width: 700px;
+      zoom: 1;
+    }
+    a.demo_left:focus span {
+     color: #666;
+    }
+    footer {
+      position: relative;
+      left:0;
+    }
+    .container {
+      position: relative;
+      min-height: 550px;
+      margin: 30px 40px 60px;
+    }
+    header {
+      margin: 0;
+      display: absolute;
+    }
+    header .title:before {
+      display:none;
+    }
+    .ie_dot {
+      position: absolute;
+      content: '';
+      width: 7px;
+      height: 7px;
+      background-color: #ddd;
+      top: 50%;
+      /* top: -4px; */
+      left: -17px;
+      border-radius: 50%;
+      -ms-behavior: url(PIE.htc);
+      behavior: url(PIE.htc);
+    }
     section {
       width: 320px;
       min-width: 320px;
@@ -77,6 +113,7 @@
     .container {
       min-height: 300px;
     }
+    a:focus{outline:none;}
   </style>
   <![endif]-->
   
@@ -84,28 +121,34 @@
 <body>    
   <div class="demo">
     <header>
-      <a href="javascript:location.reload();" class="demo_left"><img class="logo" src="./images/logo.png" alt=""><span class="title">后台管理系统</span></a>
+      <a href="javascript:location.reload();" class="demo_left"><img class="logo" src="./images/logo.png" alt=""><span class="title"><b class="ie_dot"></b>后台管理系统</span></a>
       <div class="demo_right"><a href="javascript:location.reload();">PC客户端</a> | <a href="javascript:location.reload();">手机客户端</a></div>
     </header>
     <div class="top_bar"></div>
     <div class="container">
       <section>
         <div class="form_title">管理员登录</div>
-        <div><label htmlFor="">账　号：</label><input id="name" placeholder="请输入账号" type="text" autocapitalize="off" autocorrect="off" /><span class="valid"></span></div>
+        <div>
+          <label htmlFor="">账　号：</label>
+          <i class="a pholder hide">请输入账号</i>
+          <input id="name" placeholder="请输入账号" type="text" autocapitalize="off" autocorrect="off" />
+          <span class="valid"></span></div>
         <div>
           <label htmlFor="">密　码：</label>
+          <i class="b pholder hide">请输入密码</i>
           <input autocapitalize="off" autocorrect="off" id="password" placeholder="请输入密码" type="password"/>
-          <i class="ph_pw hide">请输入密码</i>
           <span class="valid"></span>
         </div>
         <div class="img_code">
           <label htmlFor="">图形码：</label>
           <input id="img" autocapitalize="off" autocorrect="off" placeholder="图形验证码" class="iphone_code"/>
+          <i class="c pholder hide">图形验证码</i>
           <span id="img_code" class="code-span" onclick="createCode(4)">Xa99</span>
           <span class="valid"></span>
         </div>
         <div class="iphone">
           <label htmlFor="">手　机：</label><input onfocus="onInput()" placeholder="请输入手机号" type="tel" id="mobile" name="mobile" class="iphone_code"/>
+          <i class="d pholder hide">请输入手机号</i>
           <span id="code" class="code-span" onclick="getSms();">发送验证码</span>
           <span id="iphone_valid" class="valid"></span>
         </div>
@@ -113,6 +156,7 @@
         <div>
           <label htmlFor="">手机码：</label>
           <input id="phone_c" placeholder="请输入手机码" type="tel"/>
+          <i class="e pholder hide">请输入手机码</i>
           <span class="valid"></span>
         </div>
         <!-- <div id="valid" class="valid"></div> -->
@@ -131,38 +175,10 @@
       var that = $(this),
       text= that.attr('placeholder');
       if(that.val()===""){
-        if (that.attr('type') === 'password') {
-          $('.ph_pw').removeClass('hide');
-          // that.val(text).addClass('placeholder');
-        } else {
-          that.val(text).addClass('placeholder');
-        }
-        
+        $('.pholder').removeClass('hide'); //===
+      } else {
+        $('.pholder').addClass('hide')
       }
-      that.focus(function(){
-        if(that.val()===text){
-          if (that.attr('type') === 'password') {
-            $('.ph_pw').addClass('hide');
-          } else {
-            that.val("").removeClass('placeholder');
-          }          
-        }
-      })
-      .blur(function(){
-        if(that.val()===""){
-          if (that.attr('type') === 'password') {
-            $('.ph_pw').removeClass('hide');
-            // that.val(text).addClass('placeholder');
-          } else {
-            that.val(text).addClass('placeholder');
-          }
-        }
-      })
-      .closest('form').submit(function(){
-        if(that.val() === text){
-          that.val('');
-        }
-      });
     });
   }
 </script>
