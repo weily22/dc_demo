@@ -105,7 +105,7 @@
           <span class="valid"></span>
         </div>
         <div class="iphone">
-          <label htmlFor="">手　机：</label><input oninput="onInput()" placeholder="请输入手机号" type="tel" id="mobile" name="mobile" class="iphone_code"/>
+          <label htmlFor="">手　机：</label><input onfocus="onInput()" placeholder="请输入手机号" type="tel" id="mobile" name="mobile" class="iphone_code"/>
           <span id="code" class="code-span" onclick="getSms();">发送验证码</span>
           <span id="iphone_valid" class="valid"></span>
         </div>
@@ -169,7 +169,10 @@
 <!--ie placeholder 兼容 end-->
   <script src="./index.js"></script>
   <script>
-    document.body.attachEvent('touchstart', function() {});
+    // document.body.attachEvent("touchstart",function(){
+    //   console.log('start')
+    // },false);
+    document.body.attachEvent && document.body.attachEvent('touchstart', function() {});
   </script>
 </body>
 </html>
