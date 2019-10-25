@@ -113,3 +113,9 @@ $('#mobile').on('keyup', function () {
   value = arr.join('');
   that.val(value);
 })
+
+if (window.attachEvent) {    
+  window.attachEvent('touchstart', function() {});    
+} else if (window.addEventListener) {    
+  window.addEventListener("touchstart", function() {});      
+}  
