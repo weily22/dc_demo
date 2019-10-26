@@ -474,7 +474,6 @@ footer span:active, footer a:active {
   .container {
     position: relative;
     min-height: 500px;
-    /* background-color: #f00; */
   }
 }
 /* 平板 */
@@ -490,26 +489,7 @@ footer span:active, footer a:active {
 
   a.demo_left:active .title {
     box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 3px inset;
-    /* background: #f00; */
-  /* } */
-  /* a.demo_left:active {
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 1px inset;
-    background: #ddd;
   }
-  .demo_right a:active {
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 1px inset;
-    background: #ddd;
-  }
-  input{
-    border: 0 none;
-    resize:none; 
-    -webkit-appearance:none;
-    line-height: normal;
-  }
-  input:focus {
-    color: #8b8791;
-  }
-
 }
 /* ipads兼容 */
 @media only screen 
@@ -582,4 +562,46 @@ and (orientation : portrait) {
     color: #8b8791;
   }
 }
+
+@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2){/* 兼容iphone5 */
+  body, html {
+    font-size: 13px;
+  }
+  header .logo {
+    width: 35%;
+  }
+  header .title {
+    font-size: 16px;
+    /* background: #f00; */
+  }
+  section {
+    /* background-color: #f00; */
+    height: 360px;
+    transform: translateY(-50%);
+    padding: 30px 10px 30px;
+  }
+
+  section .vaild {
+    font-size: .1rem;
+    left: 68px;
+    top: 29px;
+  }
+
+  section > div {
+    margin-bottom: 1rem;
+  }
+  section .code-span {
+    font-size: 12px;
+    /* margin-left: 1rem; */
+    /* transform: scale(.5); */
+  }
+  section input, section label, section .code-span {
+    height: 2.4rem;
+    line-height: 2.4rem;
+  }
+  section input::-webkit-input-placeholder {
+    font-size: 13px;
+  }
+}
+
 
