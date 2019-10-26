@@ -318,9 +318,6 @@ footer span:active, footer a:active {
 }
 
 /* 兼容360 */
-body.browser_360 {
-  /* background-color: pink; */
-}
 body.browser_360 .container {
   position: relative;
   min-height: 450px;
