@@ -474,11 +474,11 @@ footer span:active, footer a:active {
   .container {
     position: relative;
     min-height: 500px;
-    background-color: #f00;
+    /* background-color: #f00; */
   }
 }
 /* 平板 */
-/* @media screen and (min-width:600px) and (max-width:960px) {
+@media screen and (min-width:600px) and (max-width:960px) {
   .btn:active {
     background-color: #e2a606;
     -webkit-tap-highlight-color: transparent;
@@ -510,7 +510,7 @@ footer span:active, footer a:active {
     color: #8b8791;
   }
 
-} */
+}
 /* ipads兼容 */
 @media only screen 
 and (min-device-width : 768px) 
