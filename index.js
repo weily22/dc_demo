@@ -106,7 +106,6 @@ function initBrowser () {
   }
   var is360 = _mime("type", "application/vnd.chromium.remoting-viewer");
   if (is360) {
-    alert('360')
     $('body').addClass('browser_360');
   }
 }
