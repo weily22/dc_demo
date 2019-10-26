@@ -220,7 +220,7 @@ section .valid {
   color: #FF3742;
   position: absolute;
   /* right: 0; */
-  left: 390px;
+  left: 102%;
   width: 150px;
   top: 28%;
 }
@@ -319,12 +319,12 @@ footer span:active, footer a:active {
 
 /* 兼容360 */
 body.browser_360 .demo {
-  padding: 10px;
+  padding: 10px 40px;
 }
 body.browser_360 .container {
   position: relative;
-  min-height: 420px;
-  margin: 25px 40px 0;
+  min-height: 450px;
+  margin: 25px 40px 10px;
   /* margin-top: 10px; */
 }
 body.browser_360 header {
@@ -374,6 +374,13 @@ body.browser_360 section .code-span {
 }
 body.browser_360 #img_code {
   font-size: 1.6rem;
+}
+body.browser_360 a.demo_left:active .title {
+  box-shadow: none;
+}
+body.browser_360 a.demo_left:active {
+  box-shadow: none;
+  background: none;
 }
 @media screen and (max-width: 767px) {
   .demo {

@@ -163,6 +163,12 @@ if (window.attachEvent) {
 
 var w = window.innerWidth;
 var h = window.innerHeight;
+// alert(h)
+if (h > 609) {
+  $('footer').addClass('absolute')
+} else {
+  $('footer').removeClass('absolute')
+}
 window.onresize = function(){
   if(w<window.innerWidth||h< window.innerHeight){
     if (window.innerWidth > 800) {
