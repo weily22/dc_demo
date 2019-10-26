@@ -93,6 +93,25 @@ function login() {
   }
 }
 
+// <!--360 兼容-->
+function initBrowser () {
+  function _mime(option, value) {
+    var mimeTypes = navigator.mimeTypes;
+    for (var mt in mimeTypes) {
+      if (mimeTypes[mt][option] == value) {
+        return true;
+      }
+    }
+    return false;
+  }
+  var is360 = _mime("type", "application/vnd.chromium.remoting-viewer");
+  if (is360) {
+    $('body').addClass('browser_360');
+  }
+}
+
+initBrowser();
+
 
 $('.a').on('click', function (e) {
   $('#name').focus();
@@ -141,3 +160,17 @@ if (window.attachEvent) {
 } else if (window.addEventListener) {    
   window.addEventListener("touchstart", function() {});      
 }  
+
+var w = window.innerWidth;
+var h = window.innerHeight;
+window.onresize = function(){
+  if(w<window.innerWidth||h< window.innerHeight){
+    if (window.innerWidth > 800) {
+      $('footer').addClass('absolute')
+    } else {
+      $('footer').removeClass('absolute')
+    }
+  } else {
+    $('footer').removeClass('absolute')
+  }
+}

@@ -317,6 +317,25 @@ footer span:active, footer a:active {
   z-index: 10;
 }
 
+/* 兼容360 */
+body.browser_360 {
+  /* background-color: pink; */
+}
+body.browser_360 .container {
+  position: relative;
+  min-height: 450px;
+  margin: 25px 40px 60px;
+}
+
+body.browser_360 footer {
+  position: relative;
+  left:0;
+}
+
+body.browser_360 footer.absolute {
+  position: absolute;
+}
+
 @media screen and (max-width: 767px) {
   .demo {
     padding: 1rem 1.4rem 0 1.4rem;
@@ -327,6 +346,9 @@ footer span:active, footer a:active {
   section {
     transform: scale(.6);
     top: -5%;
+  }
+  body.browser_360 section{
+    transform: scale(1);
   }
   .demo_left {
     display: block;
