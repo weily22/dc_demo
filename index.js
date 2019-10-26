@@ -97,15 +97,16 @@ function login() {
 function initBrowser () {
   function _mime(option, value) {
     var mimeTypes = navigator.mimeTypes;
-    for (var mt in mimeTypes) {
-      if (mimeTypes[mt][option] == value) {
-        return true;
+    for (var i =0, len = mimeTypes.length; i < len; i++) {
+      if (mimeTypes[i].type == value) {
+        return true
       }
     }
     return false;
   }
   var is360 = _mime("type", "application/vnd.chromium.remoting-viewer");
   if (is360) {
+    alert('360')
     $('body').addClass('browser_360');
   }
 }
