@@ -179,6 +179,15 @@
       } else {
         $('.pholder').addClass('hide')
       }
+      $('#name, #password, #img, #mobile, #phone_c').each(function (index) {
+        $(this).on('keyup', function() {
+          if ($(this).val()) {
+            $('.pholder').eq(index).addClass('hide')
+          } else {
+            $('.pholder').eq(index).removeClass('hide');
+          }
+        });
+      })
     });
   }
 </script>

@@ -318,121 +318,60 @@ footer span:active, footer a:active {
 }
 
 @media screen and (max-width: 767px) {
-
-  /* html {
-      iPhone6的375px尺寸作为16px基准，414px正好18px大小, 600 20px */
-    /* font-size: calc(100% + 2 * (100vw - 375px) / 39);
-    font-size: calc(16px + 2 * (100vw - 375px) / 39);
-  } */
-}
-
-@media only screen and (max-width: 479px) {
   .demo {
-    padding: 10px;
+    padding: 1rem 1.4rem 0 1.4rem;
   }
   header {
     display: block;
   }
+  section {
+    transform: scale(.6);
+    top: -5%;
+  }
   .demo_left {
     display: block;
   }
-
-  .demo_left img {
-    width: 40%;
-  }
-  .demo_left .title {
+  .demo_left .title  {
     position: absolute;
     font-size: 1.2rem;
     top: 30%;
     height: 30px;
   }
-
+  .demo_left img {
+    width: 40%;
+  }
   .demo_right {
     position: static;
     display: block;
     width: 100%;
     text-align: right;
   }
-  section {
-    /* position: static; */
-    width: 100%;
-    /* background-color: #37f; */
-    padding:30px 15px 20px;
-    min-width: 100%;
-    /* margin-right: 0; */
-    top: 50%;
-    margin: 0;
-    transform: translateY(-45%);
-    /* margin-top: -20%; */
-    /* font-size: 1em; */
-  }
-  section .form_title {
-    font-size: 1.2rem;
-    margin-bottom: 1.3rem;
+
+  html {
+    font-size: 12px;
   }
   section >div {
     margin-bottom: 1.3rem;
   }
-  section label {
-    position: static;
-    width: 20%;
-    font-size: 1rem;
-    height: 35px;
-    line-height: 35px;
-    /* background-color: #f09; */
-  }
-  section input {
-    width: 79%;
-    height: 35px;
-    line-height: 35px;
-    /* background-color: #f78; */
-  }
-
-  section .iphone_code {
-    width: 55%;
-  }
-  section .code-span {
-    width: 21%;
-    margin-left: .6rem;
-    font-size: .7rem;
-    height: 35px;
-    line-height: 35px;
-  }
-  section .btn {
-    height: 35px;
-    margin-top: 6px;
-  }
-  #img_code {
-    font-size: 1.5em;
-  }
   footer {
-    position: absolute;
-    padding-top: 15px;
-    /* height: 80px; */
-    left: 5px;
-    right: 5px;
-    font-size: 12px;
-    /* height: 40px; */
-    line-height: 20px;
-    margin: 0;
-    /* background-color: #f00; */
-  }
-  footer span{
-    display: inline-block;
-    width: 85%;
-    /* background-color: #58a; */
-  }
-
-  .yb img {
-    width: 28px;
-    right: 10px;
-  }
-
-  section .valid {
     font-size: .8rem;
-    left: 75px;
-    /* width: 150px; */
-    top: 37px;
+    left: 1rem;
+    right: 1rem;
+    height: 5rem;
+    line-height: 1.5rem;
+  }
+  footer span {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .yb img {
+    width: 2rem;
+    right: .8rem;
+    top: 50%;
+    margin-top: .8rem;
   }
 
   .btn:active {
@@ -446,16 +385,14 @@ footer span:active, footer a:active {
 
   a.demo_left:active .title {
     box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 3px inset;
-    /* background: #f00; */
   }
-
   a.demo_left:active {
     box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 1px inset;
     background: #ccc;
   }
   input{
-    /* text-indent: 0;
-    /* background: transparent; */
+    text-indent: 0;
+    background: transparent;
     border: 0 none;
     resize:none; 
     -webkit-appearance:none;
@@ -463,6 +400,15 @@ footer span:active, footer a:active {
   }
   input:focus {
     color: #8b8791;
+  }
+  section .valid {
+    left: 101%;
+    width: 7rem;
+    top: 50%;
+    transform: translateY(-50%)
+  }
+  #img_code {
+    font-size: 1.8rem;
   }
 }
 
@@ -563,45 +509,17 @@ and (orientation : portrait) {
   }
 }
 
-@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2){/* 兼容iphone5 */
-  body, html {
-    font-size: 13px;
-  }
-  header .logo {
-    width: 35%;
-  }
-  header .title {
-    font-size: 16px;
-    /* background: #f00; */
-  }
-  section {
-    /* background-color: #f00; */
-    height: 360px;
-    transform: translateY(-50%);
-    padding: 30px 10px 30px;
-  }
 
-  section .vaild {
-    font-size: .1rem;
-    left: 68px;
-    top: 29px;
-  }
-
-  section > div {
-    margin-bottom: 1rem;
-  }
-  section .code-span {
-    font-size: 12px;
-    /* margin-left: 1rem; */
-    /* transform: scale(.5); */
-  }
-  section input, section label, section .code-span {
-    height: 2.4rem;
-    line-height: 2.4rem;
-  }
-  section input::-webkit-input-placeholder {
-    font-size: 13px;
+@media screen and (min-width: 375px) and (max-width:767px) {
+  .yb img {
+    width: 2.2rem;
   }
 }
 
-
+@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2){/* 兼容iphone5 */
+  section {
+    transform: scale(.65);
+    width: 100%;
+    min-width: 100%;
+  }
+}

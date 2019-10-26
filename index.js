@@ -125,15 +125,15 @@ $('#mobile').on('keyup', function () {
   that.val(value);
 })
 
-$('#name, #password, #img, #mobile, #phone_c').each(function (index) {
-  $(this).on('keyup', function() {
-    if ($(this).val()) {
-      $('.pholder').eq(index).addClass('hide')
-    } else {
-      $('.pholder').eq(index).removeClass('hide');
-    }
-  });
-})
+// $('#name, #password, #img, #mobile, #phone_c').each(function (index) {
+//   $(this).on('keyup', function() {
+//     if ($(this).val()) {
+//       $('.pholder').eq(index).addClass('hide')
+//     } else {
+//       $('.pholder').eq(index).removeClass('hide');
+//     }
+//   });
+// })
 
 
 if (window.attachEvent) {    
