@@ -318,21 +318,63 @@ footer span:active, footer a:active {
 }
 
 /* 兼容360 */
+body.browser_360 .demo {
+  padding: 10px;
+}
 body.browser_360 .container {
   position: relative;
-  min-height: 450px;
-  margin: 25px 40px 60px;
+  min-height: 420px;
+  margin: 25px 40px 0;
+  /* margin-top: 10px; */
+}
+body.browser_360 header {
+  margin-bottom: 5px;
+  /* transform: scale(.9); */
+  /* background-color: #f00; */
+  /* height: 500px; */
+  /* overflow: hidden; */
+}
+
+body.browser_360 header img {
+  width: 40%;
+}
+body.browser_360 header .title {
+  font-size: 20px;
+  bottom: 5px;
 }
 
 body.browser_360 footer {
   position: relative;
   left:0;
+  right:0;
+  height: 60px;
+  line-height: 60px;
+}
+
+body.browser_360 .yb img {
+  width:30px;
 }
 
 body.browser_360 footer.absolute {
   position: absolute;
 }
-
+body.browser_360 section {
+  width: 360px;
+  min-width: 360px;
+}
+body.browser_360 section >div {
+  margin-bottom: 10px;
+}
+body.browser_360 section input, section .code-span {
+  height: 36px;
+  line-height: 36px;
+}
+body.browser_360 section .code-span {
+  margin-left: 10px;
+}
+body.browser_360 #img_code {
+  font-size: 1.6rem;
+}
 @media screen and (max-width: 767px) {
   .demo {
     padding: 1rem 1.4rem 0 1.4rem;
