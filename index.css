@@ -345,8 +345,8 @@ body.browser_360 header .title {
 
 body.browser_360 footer {
   position: relative;
-  left:0;
-  right:0;
+  left:40px;
+  right:40px;
   height: 60px;
   line-height: 60px;
 }
