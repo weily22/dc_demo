@@ -487,9 +487,13 @@ body.browser_360 a.demo_left:active {
     text-indent: 0;
     background: transparent;
     border: 0 none;
-    resize:none; 
+    resize: none; 
     -webkit-appearance:none;
     line-height: normal;
+  }
+  section input::-webkit-input-placeholder {
+    font-size: 14px;
+    color: #C8C8C8;
   }
   input:focus {
     color: #8b8791;
