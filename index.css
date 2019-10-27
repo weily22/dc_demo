@@ -127,7 +127,7 @@ section input {
   border: 1px solid #D6D6D6;
   display:inline-block;
   outline: none;
-  padding: 2px 10px;
+  padding: 5px 10px;
   font-size: 16px;
   z-index: 2;
   position: relative;
@@ -384,10 +384,52 @@ body.browser_360 a.demo_left:active {
 }
 @media screen and (max-width: 767px) {
   .demo {
-    padding: 1rem 1.4rem 0 1.4rem;
+    padding: 1rem 1rem 0 1rem;
   }
   header {
-    display: block;
+    flex-wrap: nowrap;
+    padding: 0 5px 5px;
+  }
+  header .logo {
+    margin-right: 5px; 
+  }
+  .top_bar {
+    height: 3px;
+  }
+  header .demo_left{
+    /* display: block; */
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+    transform: scale(0.9);
+    margin-left: -10px;
+  }
+  header .demo_left img {
+    width: 53%;
+    height: auto;
+  }
+  header .demo_left .title {
+    font-size: .7rem;
+    bottom: -10px;
+    line-height: 45px;
+    margin-left: 5px;
+  }
+  header .title:before {
+    width: 5px;
+    height: 5px;
+    top: 45%;
+  }
+  header .demo_right {
+    width: 40%;
+    height: 45px;
+    line-height: 65px;
+    position: static;
+    text-align: right;
+    transform: scale(0.8);
+  }
+  header .demo_right a {
+    font-size: .5rem;
+    /* display: block; */
   }
   section {
     transform: scale(.6);
@@ -395,24 +437,6 @@ body.browser_360 a.demo_left:active {
   }
   body.browser_360 section{
     transform: scale(1);
-  }
-  .demo_left {
-    display: block;
-  }
-  .demo_left .title  {
-    position: absolute;
-    font-size: 1.2rem;
-    top: 30%;
-    height: 30px;
-  }
-  .demo_left img {
-    width: 40%;
-  }
-  .demo_right {
-    position: static;
-    display: block;
-    width: 100%;
-    text-align: right;
   }
 
   html {
@@ -429,17 +453,18 @@ body.browser_360 a.demo_left:active {
     line-height: 1.5rem;
   }
   footer span {
-    width: 100%;
+    width: 120%;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(.6);
   }
   .yb img {
     width: 2rem;
     right: .8rem;
     top: 50%;
-    margin-top: .8rem;
+    /* margin-top: .8rem; */
+    transform: translateY(-50%);
   }
 
   .btn:active {
@@ -585,9 +610,23 @@ and (orientation : portrait) {
 }
 
 @media (device-height:568px) and (-webkit-min-device-pixel-ratio:2){/* 兼容iphone5 */
+  header .demo_left{
+    transform: scale(0.8);
+    margin-left: -20px;
+  }
+
+  header .title:before {
+    left: -10px;
+  }
+  header .demo_right {
+    width: 46%;
+  }
   section {
     transform: scale(.65);
     width: 100%;
     min-width: 100%;
+  }
+  footer span {
+    width: 130%;
   }
 }
