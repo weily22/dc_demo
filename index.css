@@ -399,21 +399,21 @@ body.browser_360 a.demo_left:active {
   header .demo_left{
     /* display: block; */
     /* width: 65%; */
-    display: flex;
-    justify-content: space-between;
-    transform: scale(0.9);
-    margin-left: -10px;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* transform: scale(0.9); */
+    /* margin-left: -10px; */
   }
   header .demo_left img {
-    width: 110px;
+    width: 50%;
     height: auto;
-    min-height: 50px;
+    /* min-height: 50px; */
     margin-right: 10px;
   }
   header .demo_left .title {
     font-size: .7rem;
     bottom: -10px;
-    line-height: 45px;
+    line-height: 55px;
     margin-left: 5px;
   }
   header .title:before {
@@ -423,7 +423,7 @@ body.browser_360 a.demo_left:active {
     left: -10px;
   }
   header .demo_right {
-    width: 40%;
+    width: 55%;
     height: 45px;
     line-height: 65px;
     position: static;
@@ -618,19 +618,23 @@ and (orientation : portrait) {
 
 @media (device-height:568px) and (-webkit-min-device-pixel-ratio:2){/* 兼容iphone5 */
   header .demo_left{
-    transform: scale(0.8);
-    margin-left: -20px;
+    /* transform: scale(0.8);
+    margin-left: -20px; */
   }
-  header .demo_left img {
-    width: 50%;
+  header .demo_left .logo {
+    width: 45%;
   }
 
   header .title:before {
     left: -10px;
   }
+  header .demo_left .title {
+    line-height: 45px;
+  }
   header .demo_right {
-    width: 70%;
+    width: 78%;
     transform: scale(.65);
+    margin-right: -18px;
   }
   section {
     transform: scale(.65);
