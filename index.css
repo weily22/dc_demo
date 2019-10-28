@@ -489,7 +489,7 @@ body.browser_360 a.demo_left:active {
   section input{
     text-indent: 0;
     background: transparent;
-    border: 0 none;
+    /* border: 0 none; */
     resize: none; 
     -webkit-appearance:none;
     line-height: normal;
