@@ -486,13 +486,14 @@ body.browser_360 a.demo_left:active {
     box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 1px inset;
     background: #ccc;
   }
-  input{
+  section input{
     text-indent: 0;
     background: transparent;
     border: 0 none;
     resize: none; 
     -webkit-appearance:none;
     line-height: normal;
+    /* background-color: #f00; */
   }
   section input::-webkit-input-placeholder {
     font-size: 14px;
@@ -566,7 +567,8 @@ and (orientation : landscape) {
     border: 0 none;
     resize:none; 
     -webkit-appearance:none;
-    line-height: normal;
+    /* line-height: normal; */
+    line-height: 30px;
   }
   input:focus {
     color: #8b8791;
