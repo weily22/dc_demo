@@ -491,9 +491,9 @@ body.browser_360 a.demo_left:active {
     background: transparent;
     resize: none; 
     -webkit-appearance:none;
-    font-size: 22px;
-    line-height: 25px;
-    padding: 10px;
+    font-size: 15px;
+    line-height: normal;
+    padding: 12px 10px 10px;
   }
   section input::-webkit-input-placeholder {
     font-size: 14px;
@@ -566,10 +566,10 @@ and (orientation : landscape) {
   section input{
     resize:none; 
     -webkit-appearance:none;
-    line-height: normal;
-    font-size: 22px;
-    line-height: 25px;
     padding: 10px;
+    font-size: 15px;
+    line-height: normal;
+    padding: 12px 10px 10px;
   }
   input:focus {
     color: #8b8791;
@@ -604,10 +604,9 @@ and (orientation : portrait) {
   section input{
     resize:none; 
     -webkit-appearance:none;
+    font-size: 15px;
     line-height: normal;
-    font-size: 20px;
-    line-height: 24px;
-    padding: 10px;
+    padding: 10px 10px 10px;
   }
   input:focus {
     color: #8b8791;
