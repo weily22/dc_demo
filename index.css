@@ -569,7 +569,7 @@ and (orientation : landscape) {
     padding: 10px;
     font-size: 15px;
     line-height: normal;
-    padding: 12px 10px 10px;
+    padding: 10px 10px 10px;
   }
   input:focus {
     color: #8b8791;
